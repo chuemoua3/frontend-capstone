@@ -1,7 +1,7 @@
 import React from 'react';
 import SongService from '../services/SongService';
-import SongComponent from '../components/SongComponent';
-import axios from 'axios'
+// import SongComponent from '../components/SongComponent';
+// import axios from 'axios'
 import { Button } from '@material-ui/core';
 
 class UserComponent extends React.Component{
@@ -34,11 +34,12 @@ class UserComponent extends React.Component{
       render() {
         return (
           <form>
+          <br/>
             <label>
               Name:
               <input type="text" onChange={this.handleChange} />
             </label>
-            <Button onClick={this.userSave}>Submit</Button>
+            <Button onClick={this.userSave}  color="secondary">Submit</Button>
           </form>
         );
       }

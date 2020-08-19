@@ -16,7 +16,7 @@ class SongComponent extends React.Component {
         super(props)
         this.state = {
             songs:[],
-            // correctAnswers: [a,c,d,b,c,a,d,c]
+            // correctAnswers: [a,c,d,b,c,a,d,c],
             answerChoice: []
         }
     }
@@ -33,18 +33,22 @@ class SongComponent extends React.Component {
         let answer = event.target.value.charAt(0);
         this.state.answerChoice.push(answer);
         console.log(this.state.answer);
-    }
+    };
 
+    //calculating points???
+    
 
     
 
     render (){
         return (
             <div className="container1">
+            
                 <h1 className="text-center">Guess That Song</h1>
                 <h4>Choose the correct answer song title that goes with the lyrics.</h4>
                 <br></br>
                     <div className="container2">
+
                     {this.state.songs.map(song => 
                          <FormControl component = "fieldset">
                         
@@ -56,13 +60,13 @@ class SongComponent extends React.Component {
                         <button onClick={this.answerChoice}><FormControlLabel value = {song.answer2} control = {<Radio></Radio>} label={song.answer2}></FormControlLabel></button>   
                         <button onClick={this.answerChoice}><FormControlLabel value = {song.answer3} control = {<Radio></Radio>} label={song.answer3}></FormControlLabel></button>   
                         <button onClick={this.answerChoice}><FormControlLabel value = {song.answer4} control = {<Radio></Radio>} label={song.answer4}></FormControlLabel></button>   
-                        </RadioGroup>
+                        </RadioGroup><br/>
                         </FormControl>
                 
                     )}
                     </div>
-                    <Button className="btn btn-primary" type="submit">Submit</Button>
-            </div>
+                    <Button variant="contained" color="secondary">Submit</Button><br/>
+                    <br/></div>
 
         )
     }
