@@ -5,7 +5,8 @@ import {
     FormLabel,
     FormControlLabel,
     Radio,
-    RadioGroup
+    RadioGroup,
+    Button
 } from '@material-ui/core';
 
 
@@ -14,7 +15,9 @@ class SongComponent extends React.Component {
     constructor(props){
         super(props)
         this.state = {
-            songs:[]
+            songs:[],
+            // correctAnswers: [a,c,d,b,c,a,d,c]
+            answerChoice: []
         }
     }
 
@@ -24,6 +27,14 @@ class SongComponent extends React.Component {
            this.setState({ songs: response.data})  
         });
     }
+
+    //maybe have to do this handleChange method for answerChoice
+    handleChange = (event) => {
+        let answer = event.target.value.charAt(0);
+        this.state.answerChoice.push(answer);
+        console.log(this.state.answer);
+    }
+
 
     
 
@@ -36,19 +47,21 @@ class SongComponent extends React.Component {
                     <div className="container2">
                     {this.state.songs.map(song => 
                          <FormControl component = "fieldset">
-
+                        
+                        {/* Lyrics question */}
                         <FormLabel component = "legend">{song.lyrics}</FormLabel>
+
                         <RadioGroup name = "answer" aria-label="answer">
-                            <FormControlLabel value = {song.answer1} control = {<Radio></Radio>} label={song.answer1}></FormControlLabel>   
-                            <FormControlLabel value = {song.answer2} control = {<Radio></Radio>} label={song.answer2}></FormControlLabel>   
-                            <FormControlLabel value = {song.answer3} control = {<Radio></Radio>} label={song.answer3}></FormControlLabel>   
-                            <FormControlLabel value = {song.answer4} control = {<Radio></Radio>} label={song.answer4}></FormControlLabel>   
+                        <button onClick={this.answerChoice}><FormControlLabel value = {song.answer1} control = {<Radio></Radio>} label={song.answer1}></FormControlLabel></button>
+                        <button onClick={this.answerChoice}><FormControlLabel value = {song.answer2} control = {<Radio></Radio>} label={song.answer2}></FormControlLabel></button>   
+                        <button onClick={this.answerChoice}><FormControlLabel value = {song.answer3} control = {<Radio></Radio>} label={song.answer3}></FormControlLabel></button>   
+                        <button onClick={this.answerChoice}><FormControlLabel value = {song.answer4} control = {<Radio></Radio>} label={song.answer4}></FormControlLabel></button>   
                         </RadioGroup>
                         </FormControl>
                 
                     )}
                     </div>
-
+                    <Button className="btn btn-primary" type="submit">Submit</Button>
             </div>
 
         )
@@ -56,3 +69,5 @@ class SongComponent extends React.Component {
 }
 
 export default SongComponent;
+
+//create onClick for each button

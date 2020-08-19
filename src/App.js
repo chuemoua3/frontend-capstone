@@ -21,6 +21,7 @@ function App() {
         </a>
       </header> */}
       <UserComponent/>
+      <hr></hr>
       <SongComponent/>
     </div>
   );
