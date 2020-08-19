@@ -25,11 +25,15 @@ class SongComponent extends React.Component {
         });
     }
 
+    
+
     render (){
         return (
-            <div>
-                <h1 className="text-center">Song List</h1>
-                    <div>
+            <div className="container1">
+                <h1 className="text-center">Guess That Song</h1>
+                <h4>Choose the correct answer song title that goes with the lyrics.</h4>
+                <br></br>
+                    <div className="container2">
                     {this.state.songs.map(song => 
                          <FormControl component = "fieldset">
 

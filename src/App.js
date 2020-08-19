@@ -1,7 +1,7 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import SongComponent from './components/SongComponent';
+import UserComponent from './components/UserComponent';
 
 function App() {
   return (
@@ -20,6 +20,7 @@ function App() {
           Learn React
         </a>
       </header> */}
+      <UserComponent/>
       <SongComponent/>
     </div>
   );
