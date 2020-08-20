@@ -8,7 +8,8 @@ import {
     Radio,
     RadioGroup,
     Button,
-    Grid
+    Grid,
+    Typography
 } from '@material-ui/core';
 
 
@@ -63,6 +64,7 @@ class SongComponent extends React.Component {
                 </tr>
             </thead>
                 {/* <h1 className="text-center">Guess That Song</h1> */}
+                <br></br>
                 <h5>Choose the correct answer song title that goes with the lyrics.</h5>
                 <br></br>
                     <div className="container2">
@@ -72,13 +74,13 @@ class SongComponent extends React.Component {
                          <FormControl component = "fieldset">
                         
                         {/* Lyrics question */}
-                        <FormLabel component = "legend">{song.lyrics}</FormLabel>
-
+                        {/* <FormLabel className="lyrics"component = "legend">{song.lyrics}</FormLabel> */}
+                        <Typography variant="">{song.lyrics}</Typography>
                         <RadioGroup name = "answer" aria-label="answer" onChange={this.handleChange}>
-                        <FormControlLabel value = {song.answer1} control = {<Radio></Radio>} label={song.answer1}></FormControlLabel>
-                        <FormControlLabel value = {song.answer2} control = {<Radio></Radio>} label={song.answer2}></FormControlLabel> 
-                        <FormControlLabel value = {song.answer3} control = {<Radio></Radio>} label={song.answer3}></FormControlLabel>  
-                        <FormControlLabel value = {song.answer4} control = {<Radio></Radio>} label={song.answer4}></FormControlLabel>   
+                            <FormControlLabel value = {song.answer1} control = {<Radio></Radio>} label={song.answer1}></FormControlLabel>
+                            <FormControlLabel value = {song.answer2} control = {<Radio></Radio>} label={song.answer2}></FormControlLabel> 
+                            <FormControlLabel value = {song.answer3} control = {<Radio></Radio>} label={song.answer3}></FormControlLabel>  
+                            <FormControlLabel value = {song.answer4} control = {<Radio></Radio>} label={song.answer4}></FormControlLabel>   
                         </RadioGroup><br/>
                         </FormControl>
                         </div>
@@ -86,8 +88,13 @@ class SongComponent extends React.Component {
                     )}
                     </div>
                     {/* button for submitting the quiz and render out # out of 8 is right */}
-                    <button  onClick={this.getResults} data-toggle="modal" data-target="#resultsModal"color="primary">Submit</button><br/>
-                    <Button onClick={this.userSave}  color="secondary"><Link to ="/">Home</Link></Button>
+                    <button  onClick={this.getResults} data-toggle="modal" data-target="#resultsModal"color="primary">Done Guessing</button><br/>
+                    <thead>
+                        <tr>
+                            <th><Button onClick={this.userSave}  color="secondary"><Link to ="/">Home</Link></Button></th>
+                            <th><Button onClick={this.userSave} ><Link to ="#">Leaderboard</Link></Button></th>
+                        </tr>
+                    </thead>
 
                     </Grid>
                         <div className="modal fade" id="resultsModal" tabIndex="-1" role="dialog" aria-labelledby="resultsModalLabel" aria-hidden="true">

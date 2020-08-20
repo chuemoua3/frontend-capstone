@@ -45,14 +45,18 @@
   text-align: center;
 }
 .homeContainer{
-  background-color: aqua;
+  background-color: grey;
+   height: 1000px;
+  /*background-image: url(./images/guessthatsong6.jpg);
+  background-repeat: no-repeat;
+  background-size: auto; */
 }
 
 .container1 {
   text-align: center;
   background-color: transparent;
   /* background-image: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.2),rgba(0,0,0,.1),hsla(0,0%,100%,0)); */
-  height: 2500px;
+  height: 2700px;
   /* width: 400px; */
   margin: 0 auto;
   padding: 50px;
@@ -73,5 +77,10 @@
   background-image: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.2),rgba(0,0,0,.1),hsla(0,0%,100%,0));
   border-radius: 5%;
   padding-top: 5%;
-  
+}
+
+.rowHome{
+  background-image: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.2),rgba(0,0,0,.1),hsla(0,0%,100%,0));
+  border-radius: 5%;
+  padding-top: 5%;
 }

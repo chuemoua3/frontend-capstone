@@ -1,6 +1,6 @@
 import React from 'react';
 import SongService from '../services/SongService';
-import { Button, Grid } from '@material-ui/core';
+import { Button } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 
 class UserComponent extends React.Component{
@@ -33,7 +33,7 @@ class UserComponent extends React.Component{
       render() {
         return (
         <div className="homeContainer">
-
+          <div className="rowHome">
           <form className="formHome">
             <h1 className="homeHeader">Welcome to Guess That Song</h1>
             <h5>Please enter your name below.</h5>
@@ -42,9 +42,10 @@ class UserComponent extends React.Component{
               Name:
               <input type="text" onChange={this.handleChange} />
             </label>
-            <Button onClick={this.userSave}  color="secondary"><Link to ="/song" className="homeSubmit">Submit</Link></Button>
+            <Button onClick={this.userSave} color="secondary"><Link to ="/song" className="homeSubmit">Let's Guess</Link></Button>
           </form>
-
+          <p>logo</p>
+          </div>
           </div>
         );
       }
