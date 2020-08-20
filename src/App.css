@@ -37,26 +37,38 @@
   }
 }
 
-.container3, .container2{
-  /* background-image: url(./images/guessthatsong6.jpg); */
-}
 
 .formHome{
   text-align: center;
 }
 .homeContainer{
-  background-color: grey;
+  /* background-color: grey; */
    height: 1000px;
   /*background-image: url(./images/guessthatsong6.jpg);
   background-repeat: no-repeat;
   background-size: auto; */
 }
 
+.homeSubmit{
+  color:white;
+  
+}
+
+.rowHome{
+  background-image: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.2),rgba(0,0,0,.1),hsla(0,0%,100%,0));
+  border-radius: 5%;
+  padding-top: 5%;
+  color: white;
+  
+
+}
+
+/* song component */
 .container1 {
   text-align: center;
   background-color: transparent;
   /* background-image: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.2),rgba(0,0,0,.1),hsla(0,0%,100%,0)); */
-  height: 2700px;
+  height: 2680px;
   /* width: 400px; */
   margin: 0 auto;
   padding: 50px;
@@ -79,8 +91,7 @@
   padding-top: 5%;
 }
 
-.rowHome{
-  background-image: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.2),rgba(0,0,0,.1),hsla(0,0%,100%,0));
-  border-radius: 5%;
-  padding-top: 5%;
+.bgimg {
+  background-image: url('./images/image.png');
 }
+
