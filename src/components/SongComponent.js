@@ -1,11 +1,13 @@
 import React from 'react';
 import SongService from '../services/SongService';
+import { Link } from 'react-router-dom';
 import {
     FormControl,
     FormLabel,
     FormControlLabel,
     Radio,
     RadioGroup,
+    Button,
     Grid
 } from '@material-ui/core';
 
@@ -48,21 +50,20 @@ class SongComponent extends React.Component {
          console.log(this.state.counter);
     }
 
-    // setResults (result) {
-    //     if (result.length === 1) {
-    //         this.setState({ result: result[0]});
-    //     }else {
-    //         this.setState({ result: 'Undetermined'});
-    //     }
-    // }
-
     
     render (){
         return (
             <div className="container1">
+                <div className="row">
             <Grid container spacing={1} direction="column" alignItems="center">
-                <h1 className="text-center">Guess That Song</h1>
-                <h4>Choose the correct answer song title that goes with the lyrics.</h4>
+            <thead>
+                <tr>
+                <th><Button onClick={this.userSave}  color="secondary"><Link to ="/">Home</Link></Button></th>
+                <th><Button onClick={this.userSave} ><Link to ="#">Leaderboard</Link></Button></th>
+                </tr>
+            </thead>
+                {/* <h1 className="text-center">Guess That Song</h1> */}
+                <h5>Choose the correct answer song title that goes with the lyrics.</h5>
                 <br></br>
                     <div className="container2">
 
@@ -85,7 +86,9 @@ class SongComponent extends React.Component {
                     )}
                     </div>
                     {/* button for submitting the quiz and render out # out of 8 is right */}
-                    <button  onClick={this.getResults} data-toggle="modal" data-target="#resultsModal">Submit</button><br/>
+                    <button  onClick={this.getResults} data-toggle="modal" data-target="#resultsModal"color="primary">Submit</button><br/>
+                    <Button onClick={this.userSave}  color="secondary"><Link to ="/">Home</Link></Button>
+
                     </Grid>
                         <div className="modal fade" id="resultsModal" tabIndex="-1" role="dialog" aria-labelledby="resultsModalLabel" aria-hidden="true">
                         <div className="modal-dialog" role="document">
@@ -105,6 +108,7 @@ class SongComponent extends React.Component {
                             </div>
                         </div>
                         </div>
+                        </div>
                     <br/></div>
 
         )
@@ -112,5 +116,3 @@ class SongComponent extends React.Component {
 }
 
 export default SongComponent;
-
-//create onClick for each button
