@@ -1,16 +1,7 @@
 import React from 'react';
 import SongService from '../services/SongService';
 import { Link } from 'react-router-dom';
-import {
-    FormControl,
-    FormLabel,
-    FormControlLabel,
-    Radio,
-    RadioGroup,
-    Button,
-    Grid,
-    Typography
-} from '@material-ui/core';
+import {FormControl,FormLabel,FormControlLabel,Radio,RadioGroup,Button,Grid,Typography} from '@material-ui/core';
 
 
 class SongComponent extends React.Component {
@@ -111,6 +102,10 @@ class SongComponent extends React.Component {
                             </div>
                             <div className="modal-footer">
                                 <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <Button variant="contained" color="secondary" href="/song">Let's Guess Again!</Button>
+                                
+
+
                             </div>
                             </div>
                         </div>

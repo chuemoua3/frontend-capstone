@@ -1,6 +1,6 @@
 import React from 'react';
 import SongService from '../services/SongService';
-import { Button } from '@material-ui/core';
+import { Button, Card, CardActionArea,CardContent,CardMedia,Typography } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 
 class UserComponent extends React.Component{
@@ -42,9 +42,10 @@ class UserComponent extends React.Component{
               Name:
               <input type="text" onChange={this.handleChange} />
             </label>
-            <Button onClick={this.userSave} color="secondary"><Link to ="/song" className="homeSubmit">Let's Guess</Link></Button>
+            <Button onClick={this.userSave} color="secondary"><Link to ="/song"className="homeSubmit">Let's Guess</Link></Button>
           </form>
           <p>logo</p>
+
           </div>
           </div>
         );
