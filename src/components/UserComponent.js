@@ -35,7 +35,7 @@ class UserComponent extends React.Component{
         <div className="homeContainer">
           <div className="rowHome">
             
-            <img className="logosize" src="src\images\guessthatsong6.jpg" alt="guess that song"/>
+
           <form className="formHome">
             <h1 className="homeHeader">Welcome to Guess That Song</h1>
             <h5>Please enter your name below.</h5>
@@ -44,8 +44,9 @@ class UserComponent extends React.Component{
               Name:
               <input type="text" onChange={this.handleChange} />
             </label>
-            <Button onClick={this.userSave} color="secondary"><Link to ="/song"className="homeSubmit">Let's Guess</Link></Button>
+            <button onClick={this.userSave} color="secondary"><Link to ="/song" className="homebutton">Let's Guess</Link></button>
           </form>
+            <img className="logosize" src="https://i.ibb.co/1ZrjrxN/guessthatsong6.png" alt="guess that song"/>
 
           </div>
           </div>
