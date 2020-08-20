@@ -1,6 +1,5 @@
 import React from 'react';
 import SongService from '../services/SongService';
-import { Button, Card, CardActionArea,CardContent,CardMedia,Typography } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 
 class UserComponent extends React.Component{
