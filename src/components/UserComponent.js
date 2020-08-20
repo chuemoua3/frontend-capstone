@@ -26,7 +26,7 @@ class UserComponent extends React.Component{
     userSave = (event) => {
         event.preventDefault();
         let user = {userName : this.state.name}
-        SongService.addUser(user, 0);
+        SongService.addUser(user);
         // console.log("chue", 50);
     }
     

@@ -36,11 +36,13 @@ class SongComponent extends React.Component {
         console.log(answer);
     };
     //comparing the two arrays
-    getResults = () => {
+    getResults = (prevState) => {
         let correctAnswers = ["A", "C", "D", "B", "C", "A", "D", "C"];
         for (let i = 0; i < correctAnswers.length; i++) {
             if (correctAnswers[i] === this.state.answerChoice[i]){
-                // this.state.counter++
+                this.setState((prevState) => ({
+                    counter : prevState.counter +  1
+                }))
             }
         }
          console.log(this.state.counter);
@@ -85,20 +87,20 @@ class SongComponent extends React.Component {
                     {/* button for submitting the quiz and render out # out of 8 is right */}
                     <button  onClick={this.getResults} data-toggle="modal" data-target="#resultsModal">Submit</button><br/>
                     </Grid>
-                        <div class="modal fade" id="resultsModal" tabindex="-1" role="dialog" aria-labelledby="resultsModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="resultsModalLabel">Results</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <div className="modal fade" id="resultsModal" tabIndex="-1" role="dialog" aria-labelledby="resultsModalLabel" aria-hidden="true">
+                        <div className="modal-dialog" role="document">
+                            <div className="modal-content">
+                            <div className="modal-header">
+                                <h5 className="modal-title" id="resultsModalLabel">Results</h5>
+                                <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
-                            <div class="modal-body">
+                            <div className="modal-body">
                                 You score {this.state.counter} out of 8.
                             </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <div className="modal-footer">
+                                <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
                             </div>
                             </div>
                         </div>
