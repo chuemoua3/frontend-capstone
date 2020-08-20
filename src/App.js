@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import SongComponent from './components/SongComponent';
 import UserComponent from './components/UserComponent';
-import { BrowserRouter, Route, Link, Switch, Router} from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 function App() {
   return (

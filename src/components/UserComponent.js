@@ -1,7 +1,5 @@
 import React from 'react';
 import SongService from '../services/SongService';
-import SongComponent from '../components/SongComponent';
-// import axios from 'axios'
 import { Button } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 
@@ -28,7 +26,7 @@ class UserComponent extends React.Component{
     userSave = (event) => {
         event.preventDefault();
         let user = {userName : this.state.name}
-        SongService.addUser(user);
+        SongService.addUser(user, 0);
         // console.log("chue", 50);
     }
     

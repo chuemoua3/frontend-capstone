@@ -6,7 +6,6 @@ import {
     FormControlLabel,
     Radio,
     RadioGroup,
-    Button,
     Grid
 } from '@material-ui/core';
 
@@ -41,7 +40,7 @@ class SongComponent extends React.Component {
         let correctAnswers = ["A", "C", "D", "B", "C", "A", "D", "C"];
         for (let i = 0; i < correctAnswers.length; i++) {
             if (correctAnswers[i] === this.state.answerChoice[i]){
-                this.state.counter++
+                // this.state.counter++
             }
         }
          console.log(this.state.counter);
