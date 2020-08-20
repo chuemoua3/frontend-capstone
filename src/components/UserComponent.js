@@ -1,8 +1,9 @@
 import React from 'react';
 import SongService from '../services/SongService';
-// import SongComponent from '../components/SongComponent';
+import SongComponent from '../components/SongComponent';
 // import axios from 'axios'
 import { Button } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 
 class UserComponent extends React.Component{
 
@@ -26,7 +27,7 @@ class UserComponent extends React.Component{
 
     userSave = (event) => {
         event.preventDefault();
-        let user = {userName : this.state.name, score : 50}
+        let user = {userName : this.state.name}
         SongService.addUser(user);
         // console.log("chue", 50);
     }
@@ -39,7 +40,7 @@ class UserComponent extends React.Component{
               Name:
               <input type="text" onChange={this.handleChange} />
             </label>
-            <Button onClick={this.userSave}  color="secondary">Submit</Button>
+            <Button onClick={this.userSave}  color="secondary"><Link to ="/song">Submit</Link></Button>
           </form>
         );
       }
